@@ -29,19 +29,8 @@ The difficult problem is determining **what actually happened to the money**.
 
 Consider the following integration:
 
-```
-FinFlow                        Provider
+![timeout flow](_static/timeout-error.png)
 
-   │ POST /charge                 │
-   ├─────────────────────────────►│
-   │                              │
-   │                 charge $100  │
-   │                              │
-   │        response              │
-   │◄────────── X ────────────────│
-   │
-timeout
-```
 
 FinFlow is not able to know if the provider:
 1. never received the operation;
